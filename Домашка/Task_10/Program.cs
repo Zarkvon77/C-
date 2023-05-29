@@ -5,5 +5,17 @@
 
 Console.WriteLine("Введите трёхзначное число:");
 int number = int.Parse(Console.ReadLine());
-int x = number / 10 % 10;
-Console.WriteLine("Вторая цифра вашего числа :" + x);
+if (number < 100)
+{
+    Console.WriteLine("Число слишком маленькое!!!");
+}
+else if (number > 999)
+{
+    Console.WriteLine("Число слишком большое!!!");
+}
+else
+{
+    number = number / 10 % 10;
+    Console.WriteLine("Вторая цифра вашего числа :" + number);
+}
+
